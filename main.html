@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>彩虹小屋🏳️‍🌈</title>
+	<style type="text/css">
+	@font-face {
+	font-family:HarmonyOS_Sans_SC_Medium;font-style: normal;font-display: swap;
+    src: url('../fonts/HarmonyOS_Sans_SC_Medium.subset.woff2') format('woff2');
+}
+
+* {
+	font-family: HarmonyOS_Sans_SC_Medium;
+}
+::selection{background:#212121;color:#fff}
+::-webkit-scrollbar{width:5px;height:100%;background-color:#fff}
+::-webkit-scrollbar-track{background:linear-gradient(135deg,#fff 0,#fff 100%)}
+::-webkit-scrollbar-thumb{border-radius:20px;-webkit-box-shadow:inset 0 0 6px rgba(255,255,255,.3);background-color:#212121}
+::-webkit-scrollbar-thumb:hover{border-radius:20px;-webkit-box-shadow:inset 0 0 5px rgba(255,255,255,.2);background:#212121}
+
+body {
+	font-family: 'HarmonyOS_Sans_SC_Medium';
+    font-size: 15px;
+	background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+	color: rgba(34,47,62,1);
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	line-height: 1.8;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+p {
+	margin: 0;
+	font-variant-ligatures: common-ligatures discretionary-ligatures;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link,a:visited {
+	color: rgba(34,47,62,0.7);
+	opacity: 1;
+	-webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    -ms-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+}
+
+a:hover,a:active {
+	color: #000;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	text-rendering: optimizeLegibility;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 50rem;
+    border-radius: 10px;
+    margin-top: 60px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0px 0px 30px 5px rgba(119,118,118,0.33);
+
+}
+
+.content {
+	margin: 0 auto;
+	width: 720px;
+	height: auto;
+    margin-bottom: 1rem;
+}
+
+.list_with_title .container {
+	margin: 0 auto;
+	width: 720px;
+}
+
+.header {
+	margin: 0 auto;
+	padding: 50px 0px 20px 0px;
+	max-width: 720px;
+	background-size: cover;
+	flex-wrap: wrap;
+	-webkit-background-size: cover;
+}
+
+.header .me-tx {
+    text-align: end;
+}
+
+.header .me-tx img {
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px -2px rgb(0 0 0 / 50%);
+}
+
+.header .description{
+    margin-top: -4rem;
+}
+.header .description h1{
+	color: rgba(0, 0, 0, 0.918);
+    font-size: 3rem;
+}
+.header .description p{
+	color: rgba(34,47,62,0.4);
+	font-size: 14px;
+}
+
+.header .description .sub_title {
+	float: none !important;
+	list-style: none;
+	font-weight: normal !important;
+	flex: 3;
+	justify-content: end;
+}
+.link_a{padding-right:5px!important;padding-left:5px!important}
+.links-list-item{margin: 1rem;-webkit-transition:.3s;-webkit-transition:.3s;transition:.3s;-moz-transition:.3s;border-radius:10px;transition-timing-function:ease-in-out;position:relative;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.links-list-item a{display:flex;border:none;align-items:center}
+.links-list-item:hover .links-avatar{transform:scale(2)}
+.links-list-item:hover .links-item-info span{transform:translateX(20%) translateY(0)}
+.links-avatar{margin:10px 20px 10px 10px;border-radius: 10px;-webkit-transition:.3s;-webkit-transition:.3s;transition:.3s;-moz-transition:.3s;background:#f5f5f5;max-width:60px;max-height:60px}
+.links-item-name{text-align:left;font-size:18px;color:#000;display:block;font-weight:700;align-items:center;-webkit-transition:.3s;-webkit-transition:.3s;transition:.3s;-moz-transition:.3s}
+.links-item-desc{white-space:normal;color:#000;text-align:left;text-overflow:ellipsis;opacity:.7;font-weight:700;display:block;font-size:14px;-webkit-transition:.3s;-webkit-transition:.3s;transition:.3s;-moz-transition:.3s}
+
+
+.flexbox{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+.flex-50{
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.footer {
+    clear: both;
+    margin: 0 auto;
+    padding: 25px 0px;
+    max-width: 800px;
+    text-align: center;
+    font-size: 12px;
+}
+.footer .powered_by {
+    margin: 0;
+    color: rgba(34,47,62,0.2);
+    font-size: 11px;
+}
+.footer .powered_by a {
+    margin: 0px 2px;
+    color: rgba(34,47,62,0.2);
+}
+.footer .powered_by a:hover {
+    color: #000;
+}
+
+@media screen and (max-width: 800px){
+    .main {
+    margin-top: 0px;
+    width: 100%;
+    border: 0;
+    }
+    .content {
+        width: auto;
+    }
+    .header,.index_element{
+        margin: 1rem;
+    }
+    .flex-50{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+	</style>
+</head>
+
+<body>
+    <div class=" main">
+        <div class="header">
+            <div class="me-tx">
+                <a href="/">
+                    <img src="https://www.helloimg.com/images/2022/09/01/Z7B5vc.jpg" class="long">
+
+                </a>
+            </div>
+            <div class="description">
+                <h1>Hello!</h1>
+                <p>世味年来薄似纱 谁令骑马客京华 这是来自HaShiQi的个人引导页 欢迎您的到来!</p>
+                   <p class="links-item-name ell">BilibiliUID: 604225489</p>
+            </div>
+        </div>
+        <div class="index_element">
+            <section id="" class="content"><h3>Life is like a box of chocolates, you never know what you are going to get.</h3></section>
+            <section id="links" class="content">
+                <h3><a>我的网站:</a></h3>
+                <div class="links-content flexbox"> 
+
+                    <div class="links-card flex-50">
+                        <div class="links-list-item" style="">
+                            <a href=" https://hashiqi79461.github.io/GeRenZhuYe/01.html " rel="external nofollow noreferrer" title=" 我的个人作品" target="_blank">
+                            <img class="links-avatar" alt=" MC美图 " src="https://www.helloimg.com/images/2022/09/02/Z7xRog.jpg">
+                            <div class="links-item-info">
+                                <span class="links-item-name ell"> EA个人作品集 </span>
+                                <span class="links-item-desc ell" title=" 无用标题"> EA:MC EasyArea服务器</span>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+					
+					<div class="links-card flex-50">
+                        <div class="links-list-item" style="">
+                            <a href=" https://hashiqi79461.github.io/3mofang/main.html " rel="external nofollow noreferrer" title=" 3D魔方" target="_blank">
+                            <img class="links-avatar" alt=" 魔方 " src="https://www.helloimg.com/images/2022/09/03/Z745en.jpg">
+                            <div class="links-item-info">
+                                <span class="links-item-name ell"> 3D小魔方 </span>
+                                <span class="links-item-desc ell" title=" 介绍"> 三阶小魔方, 自动打乱</span>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="links-card flex-50">
+                        <div class="links-list-item" style="">
+                            <a href=" https://hashiqi79461.github.io/GeRenZhuYe/03.html " rel="external nofollow noreferrer" title=" 鱼鱼能有什么坏心思呢？" target="_blank">
+                            <img class="links-avatar" alt=" 二次元 " src="https://www.helloimg.com/images/2022/09/02/Z7xasn.jpg">
+                            <div class="links-item-info">
+                                <span class="links-item-name ell"> 二次元美图 </span>
+                                <span class="links-item-desc ell" title="无用标题"> 来自另一个时空的美图</span>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="links-card flex-50">
+                        <div class="links-list-item" style="">
+                            <a href=" https://hashiqi79461.github.io/GeRenZhuYe/04.html " rel="external nofollow noreferrer" title=" 标题" target="_blank">
+                            <img class="links-avatar" alt=" 猴表情 " src="https://www.helloimg.com/images/2022/09/02/Z7qhmu.jpg">
+                            <div class="links-item-info">
+                                <span class="links-item-name ell"> 猿之声 </span>
+                                <span class="links-item-desc ell" title=" 同学返祖现场"> 聆听郑猿之声是一种享受</span>
+                            </div>
+                            </a>
+                        </div>
+                    </div>	
+
+                </div>           
+            </section>
+ 
+        </div>
+    </div>
+    <div class="footer">
+        <div class="powered_by">
+			<p>
+			<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>欢迎来自:
+			<script type="text/javascript"> document.write(returnCitySN["cname"]+'的访客, 你的ip地址是: '+returnCitySN["cip"]) </script>
+            </p>
+
+            <p>来自于HaShiQi的诚意</p>
+            <span><a href="1145141919810" target="_blank" rel="nofollow noopener">哈iok备79461号</a></span>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><script type="text/javascript">$(document).ready(function(){var OriginTitile = document.title; var titleTime;document.addEventListener('visibilitychange', function(){
+                if (document.hidden){
+                    document.title = '你快回来ヽ(*。>Д<)o゜';
+                    clearTimeout(titleTime);
+                }else{
+                    document.title = '终于回来啦(　ﾟ∀ﾟ) ﾉ♡';
+                    titleTime = setTimeout(function() {
+                        document.title = OriginTitile;
+                    }, 3000); // 3秒后恢复原标题  
+                }
+            });});</script>
+
+<!--点击特效并且最后加载-->
+<canvas id="fireworks" style="position:fixed;left:0;top:0;pointer-events:none;"></canvas><script type="text/javascript" src="https://hashiqi79461.github.io/dianjitexiao/fireworks2.js"></script><script type='text/javascript' src='https://hashiqi79461.github.io/dianjitexiao/fireworks1.js'></script>
+
+</html>
